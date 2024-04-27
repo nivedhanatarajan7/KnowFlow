@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.nav {
+    background-color: plum;
+    color: white;
+}
+.site-title {
+    font-size: 3rem;
+    font-size: 2rem;
+    float: left;
+    align-items: center;
+}
+
+.nav ul{
+    padding: 0;
+    margin: auto;
+    overflow: hidden;
+    list-style: none;
+}
+
+.nav a{
+    color: inherit;
+    text-decoration: none;
+    padding: .25rem;
+}
+
+.nav li.hover{
+    background-color: #777;
+}
+
+.nav li.active{
+    background-color: #555;
+}
+.loggedIn li {
+    float: right;
+    align-items: center;
+    font-size: 1.5em;
+}
+.loggedOut li {
+    float: right;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.loggedIn button {
+    display: inline;
+    background-color: #F178B6;
+    padding: 5px;
+    font-size: 15px;
+}

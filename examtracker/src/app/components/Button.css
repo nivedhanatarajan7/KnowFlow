@@ -1,0 +1,11 @@
+.button button {
+    display: block;
+    margin: 0 auto;
+    background-color: #F178B6;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.button button:hover {
+    background-color: #f18bbf;
+}

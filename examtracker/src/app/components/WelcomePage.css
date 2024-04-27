@@ -1,0 +1,44 @@
+.intro-container {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 70px; 
+    height: 80px;
+}
+
+.intro-heading {
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+
+.intro-tagline {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.intro-content {
+    margin-bottom: 30px;
+}
+
+.intro-content h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}

@@ -1,0 +1,55 @@
+
+.examcard, .examcardedit {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    border: 3px solid hotpink;
+    background-color: #ffe6e6;
+    border-radius: 15px;
+    padding: 10px;
+    width: 17%;
+    margin: 50px;
+}
+
+.exam-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 200px; 
+    border-radius: 5px;
+
+}
+
+.exam-details {
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.buttons-container {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px; 
+}
+
+
+.schedule-view-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.exam-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: flex-start;
+}
+
+
+.ending {
+    margin-bottom: 200px;
+}
+
+
+
