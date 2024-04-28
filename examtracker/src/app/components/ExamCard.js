@@ -46,7 +46,7 @@ const ExamCard = (props) => {
             
             window.location.reload();
         } catch {
-            console.log("Error in deleting exam")
+            alert("Error in deleting exam");
         }
         
     };
@@ -64,7 +64,7 @@ const ExamCard = (props) => {
             setLocation(response.data.location);
             setImg(response.data.image);
         } catch {
-            console.log("Error in editing exam")
+            alert("Error in editing exam");
         }
         
     };
