@@ -23,7 +23,7 @@ router.post("/", (req, res) => {
     .catch((err) => res.status(400).json({error: "Unable to add exam"}))
 })
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", auth, async (req, res) => {
     Exam.findByIdAndDelete(req.params.id)
     .then((exam) => res.json({msg: 'Exam deleted successfully'}))
     .catch((err) => res.status(404).json({error: "No such item"}))
