@@ -3,7 +3,9 @@ import ExamList from "../components/ExamList";
 import Link from "next/link";
 import Navbar from "../components/NavBar";
 import Button from "../components/Button";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import UserContext from "../backend/context/UserContext";
+import { useRouter } from "next/navigation";
 
 const Schedule = (props) => {
 
@@ -51,6 +53,8 @@ const Schedule = (props) => {
   
     ];
 
+
+
     const [exams, setExams] = useState(examsList);
 
     const addExamHandler = (exam) => {
@@ -58,6 +62,14 @@ const Schedule = (props) => {
             return [...prevExams, exam]
         })
     }
+
+    const {userData, setUserData} = useContext(UserContext);
+    const router = useRouter();
+    useEffect(() => {
+        if (!userData.token) {
+            router.push('/login');
+        }
+    }, [userData.token, router]);
 
     return (
         <div>

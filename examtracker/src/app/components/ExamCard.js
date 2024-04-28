@@ -2,11 +2,9 @@
 
 import React, { useContext, useEffect, useState } from 'react';
 import Button from "./Button";
-import Link from "next/link";
 import "./ExamCard.css";
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
-import EditExam from './EditExam';
 
 const ExamCard = (props) => {
     const [edit, setEdit] = useState(false);

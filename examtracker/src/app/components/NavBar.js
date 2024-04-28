@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useContext, useState } from "react";
 import UserContext from "../backend/context/UserContext";
 import { useRouter } from "next/navigation";
-import Button from "./Button";
 
 export default function Navbar() {
     const { userData, setUserData } = useContext(UserContext);

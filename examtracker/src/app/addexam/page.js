@@ -1,11 +1,20 @@
 "use client"
 
 import AddExam from "../components/AddExam";
-import { useState } from "react";
-import ExamList from "../components/ExamList";
+import { useContext, useEffect, useState } from "react";
 import Navbar from "../components/NavBar";
-import ScheduleView from "../components/ScheduleView";
+import UserContext from "../backend/context/UserContext";
+import { useRouter } from "next/navigation";
 const AddPage = (props) => {
+
+    const {userData, setUserData} = useContext(UserContext);
+    const router = useRouter();
+    useEffect(() => {
+        if (!userData.token) {
+            router.push('/login');
+        }
+    }, [userData.token, router]);
+
     return (
         <div>
             <Navbar isActive={true} />

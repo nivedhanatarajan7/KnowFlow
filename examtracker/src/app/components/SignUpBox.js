@@ -3,7 +3,7 @@ import "./Row.css"
 import Button from "./Button";
 import Card from "./Card";
 import Link from "next/link";
-import {useState, useContext} from 'react';
+import {useState, useContext, useEffect} from 'react';
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import UserContext from "../backend/context/UserContext";
@@ -11,7 +11,14 @@ import UserContext from "../backend/context/UserContext";
 const SignUpBox = () => {
     const srouter = useRouter();
     
-    const {setUserData} = useContext(UserContext);
+    
+    const {userData, setUserData} = useContext(UserContext);
+    const router = useRouter();
+    useEffect(() => {
+        if (userData.token) {
+            router.push('/schedule');
+        }
+    }, [userData.token, router]);
     
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
