@@ -159,9 +159,7 @@ const ExamCard = (props) => {
                 <p>Location: {props.location}</p>
                 <div className="buttons-container">
                     <Button onClick={editHandler}>Edit Exam</Button>
-                    <Link href="/schedule">
-                        <Button onClick={deleteHandler} >Delete Exam</Button>
-                    </Link>
+                    <Button onClick={deleteHandler}>Delete Exam</Button>
                 </div>
             </div>
         )
