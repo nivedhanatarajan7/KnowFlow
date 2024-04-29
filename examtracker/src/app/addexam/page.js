@@ -12,6 +12,8 @@ const AddPage = (props) => {
     useEffect(() => {
         if (!userData.token) {
             router.push('/login');
+        } else {
+            router.push("/addexam")
         }
     }, [userData.token, router]);
 

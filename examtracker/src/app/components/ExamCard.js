@@ -40,7 +40,7 @@ const ExamCard = (props) => {
         event.preventDefault();
 
         try {
-            const response = axios.delete(`http://localhost:8082/api/exams/${props.identifier}`);
+            const response = await axios.delete(`http://localhost:8082/api/exams/${props.identifier}`);
             window.location.reload();
         } catch {
             alert("Error in deleting exam");
